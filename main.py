@@ -24,6 +24,7 @@ def main():
   centers = cluster.kmean(transformed_dataset, shuffled_dataset, k, len_vec)
   split.cluster_folder(transformed_dataset, centers, cluster_dir)
   split.join_clusters(len_vec, k, cluster_dir)
+  return centers
 
 
-main()
+centers = main()
